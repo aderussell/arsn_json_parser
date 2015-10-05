@@ -1,0 +1,273 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB1F9FF71BC18A8E00B58E87 /* Test Data in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB1F9FF61BC18A8E00B58E87 /* Test Data */; };
+		AB581C091B1DD97700F3D970 /* json_parser_file_utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = AB581C071B1DD97700F3D970 /* json_parser_file_utilities.c */; };
+		AB656A781B164C650010E6D5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AB656A771B164C650010E6D5 /* main.c */; };
+		AB656A821B164CF60010E6D5 /* json_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = AB656A7F1B164CF60010E6D5 /* json_parser.c */; };
+		AB656A831B164CF60010E6D5 /* json_parser_utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = AB656A811B164CF60010E6D5 /* json_parser_utilities.c */; };
+		ABD3E95F1B66D5C600D4B929 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = ABD3E95E1B66D5C600D4B929 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB656A721B164C650010E6D5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				AB1F9FF71BC18A8E00B58E87 /* Test Data in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AB1F9FF61BC18A8E00B58E87 /* Test Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Data"; sourceTree = "<group>"; };
+		AB581C071B1DD97700F3D970 /* json_parser_file_utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_parser_file_utilities.c; sourceTree = "<group>"; };
+		AB581C081B1DD97700F3D970 /* json_parser_file_utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_parser_file_utilities.h; sourceTree = "<group>"; };
+		AB656A741B164C650010E6D5 /* ar_json_parser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ar_json_parser; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB656A771B164C650010E6D5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		AB656A7E1B164CF60010E6D5 /* json_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_parser.h; sourceTree = "<group>"; };
+		AB656A7F1B164CF60010E6D5 /* json_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_parser.c; sourceTree = "<group>"; };
+		AB656A801B164CF60010E6D5 /* json_parser_utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_parser_utilities.h; sourceTree = "<group>"; };
+		AB656A811B164CF60010E6D5 /* json_parser_utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_parser_utilities.c; sourceTree = "<group>"; };
+		ABD3E95E1B66D5C600D4B929 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB656A711B164C650010E6D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB656A6B1B164C650010E6D5 = {
+			isa = PBXGroup;
+			children = (
+				AB1F9FF61BC18A8E00B58E87 /* Test Data */,
+				ABD3E95E1B66D5C600D4B929 /* README.md */,
+				AB656A761B164C650010E6D5 /* ar_json_parser */,
+				AB656A751B164C650010E6D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB656A751B164C650010E6D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB656A741B164C650010E6D5 /* ar_json_parser */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB656A761B164C650010E6D5 /* ar_json_parser */ = {
+			isa = PBXGroup;
+			children = (
+				AB656A771B164C650010E6D5 /* main.c */,
+				AB656A7E1B164CF60010E6D5 /* json_parser.h */,
+				AB656A7F1B164CF60010E6D5 /* json_parser.c */,
+				AB656A801B164CF60010E6D5 /* json_parser_utilities.h */,
+				AB656A811B164CF60010E6D5 /* json_parser_utilities.c */,
+				AB581C081B1DD97700F3D970 /* json_parser_file_utilities.h */,
+				AB581C071B1DD97700F3D970 /* json_parser_file_utilities.c */,
+			);
+			path = ar_json_parser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB656A731B164C650010E6D5 /* ar_json_parser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB656A7B1B164C650010E6D5 /* Build configuration list for PBXNativeTarget "ar_json_parser" */;
+			buildPhases = (
+				AB656A701B164C650010E6D5 /* Sources */,
+				AB656A711B164C650010E6D5 /* Frameworks */,
+				AB656A721B164C650010E6D5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ar_json_parser;
+			productName = ar_json_parser;
+			productReference = AB656A741B164C650010E6D5 /* ar_json_parser */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB656A6C1B164C650010E6D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Adrian Russell";
+				TargetAttributes = {
+					AB656A731B164C650010E6D5 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AB656A6F1B164C650010E6D5 /* Build configuration list for PBXProject "ar_json_parser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AB656A6B1B164C650010E6D5;
+			productRefGroup = AB656A751B164C650010E6D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB656A731B164C650010E6D5 /* ar_json_parser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB656A701B164C650010E6D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB656A821B164CF60010E6D5 /* json_parser.c in Sources */,
+				AB581C091B1DD97700F3D970 /* json_parser_file_utilities.c in Sources */,
+				ABD3E95F1B66D5C600D4B929 /* README.md in Sources */,
+				AB656A831B164CF60010E6D5 /* json_parser_utilities.c in Sources */,
+				AB656A781B164C650010E6D5 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AB656A791B164C650010E6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AB656A7A1B164C650010E6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AB656A7C1B164C650010E6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = ansi;
+				GCC_WARN_PEDANTIC = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AB656A7D1B164C650010E6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = ansi;
+				GCC_WARN_PEDANTIC = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB656A6F1B164C650010E6D5 /* Build configuration list for PBXProject "ar_json_parser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB656A791B164C650010E6D5 /* Debug */,
+				AB656A7A1B164C650010E6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB656A7B1B164C650010E6D5 /* Build configuration list for PBXNativeTarget "ar_json_parser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB656A7C1B164C650010E6D5 /* Debug */,
+				AB656A7D1B164C650010E6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB656A6C1B164C650010E6D5 /* Project object */;
+}
