@@ -145,12 +145,12 @@ int parseJsonRFC4627Base(json_parser *parser)
             case '\n':
             case '\r':
             case '\t':
-                // do nothing
+                /* do nothing */
                 break;
                 
                 
             default:
-                // error - unacceptable character
+                /* error - unacceptable character */
                 
                 return invalidCharacter;
                 
@@ -196,7 +196,7 @@ int parseValue(json_parser *parser, int parentToken)
             case '\n':
             case '\r':
             case '\t':
-                // do nothing
+                /* do nothing */
                 break;
                 
             case 't':
@@ -542,6 +542,21 @@ int parseFalse(json_parser *parser, int parentToken)
 }
 
 
+
+
+
+typedef enum {
+    jsonNumberExpectNumberOrMinus,                  /* beginning of number */
+    jsonNumberExpectNumber,                         /* needs number for int */
+    jsonNumberExpectNumberOrDecimalOrExponentOrEnd, /* has atleast one digit */
+    jsonNumberExpectDecimalPoint,                   /* expect a decimal point */
+    jsonNumberExpectDecimalNumber,                  /* after decimal point */
+    jsonNumberExpectDecimalNumberOrExponentOrEnd,   /* has atleast one decimal digit */
+    jsonNumberExpectExponentNumberOrPlusMinus,      /* after exponent symbol */
+    jsonNumberExpectExponentNumber,                 /* after exponent symbol plus/minus */
+    jsonNumberExpectExponentNumberOrEnd             /* has atleast one decimal digit */
+} jsonNumberSection;
+
 /*
  number = [ minus ] int [ frac ] [ exp ]
  
@@ -567,7 +582,7 @@ int parseNumber(json_parser *parser, int parentToken)
 {
     // while not end of string OR a terminating character
     
-    // create the token
+    /* create the token */
     json_token *token = json_token_alloc(parser, json_number, parentToken);
     token->start = parser->pos;
     
@@ -575,31 +590,55 @@ int parseNumber(json_parser *parser, int parentToken)
     // note the index of the first character of the number being parsed
     //int firstCharacterIndex = parser->pos;
     
+    jsonNumberSection expectedSection = jsonNumberExpectNumberOrMinus;
     
-    // while not '\"' OR '\0' OR end of length specified
+    
+    /* while not '\"' OR '\0' OR end of length specified */
     while (parser->pos < parser->stringLength || parser->jsonString[parser->pos] != '\0') {
      
         
         
         
         switch (parser->jsonString[parser->pos]) {
-            case 'e': case 'E':
-                // exp
+            case 'e': case 'E': /* exponent */
+                if (expectedSection == jsonNumberExpectExponentNumberOrPlusMinus ||
+                    expectedSection == jsonNumberExpectDecimalNumberOrExponentOrEnd) {
+                    expectedSection = jsonNumberExpectExponentNumberOrPlusMinus;
+                } else {
+                    return invalidCharacter;
+                }
                 break;
-            case '.':
-                // decimalpoint
+            case '.':       /* decimal point */
+                if (expectedSection == jsonNumberExpectDecimalNumberOrExponentOrEnd ||
+                    expectedSection == jsonNumberExpectDecimalPoint) {
+                    expectedSection = jsonNumberExpectDecimalNumber;
+                } else {
+                    return invalidCharacter;
+                }
                 break;
-            case '-':
-                // must be first char OR after 'e'
+            case '-':       /* must be first char OR after 'e' */
+                if (expectedSection == jsonNumberExpectNumberOrMinus) {
+                    expectedSection = jsonNumberExpectNumber;
+                } else if (expectedSection == jsonNumberExpectExponentNumberOrPlusMinus) {
+                    expectedSection = jsonNumberExpectExponentNumber;
+                } else {
+                    return invalidCharacter;
+                }
                 break;
-            case '+':
-                // must be after 'e'
+            case '+':       /* must be after 'e' */
+                if (expectedSection == jsonNumberExpectExponentNumberOrPlusMinus) {
+                    expectedSection = jsonNumberExpectExponentNumber;
+                } else {
+                    return invalidCharacter;
+                }
                 break;
-                
-                
             case '0':
                 // if first char
                     // next must be decimal
+                if (expectedSection == jsonNumberExpectNumberOrMinus) {
+                    expectedSection = jsonNumberExpectDecimalPoint;
+                }
+                
                 break;
                 
             case '1': case '2': case '3':

@@ -27,6 +27,8 @@ void benchmarkFile(char *filename)
     clock_t begin, end;
     double time_spent;
     
+    json_error_code error_code;
+    
     json_token *tokens = calloc(sizeof(json_token), 3000000);
     
     json_parser parser;
@@ -45,7 +47,7 @@ void benchmarkFile(char *filename)
     begin = clock();
     
     /* parse the json document */
-    parse_json(&parser, RFC4627);
+    error_code = parse_json(&parser, RFC4627);
     
     
     end = clock();

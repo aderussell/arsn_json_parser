@@ -11,7 +11,6 @@ Note: The parser is implemented in a recursive manner that makes it unsuitable f
 
 
 #TODO
-* Add numerical value validation checking
 * Create python wrapper
 * Additional unit tests
 * extend makefile to produce static and dynamic libraries
